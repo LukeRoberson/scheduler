@@ -23,3 +23,7 @@ COPY . .
 
 # Start the application (unbuffered mode so we can see terminal output)
 CMD ["python", "-u", "/app/main.py"]
+
+# Set the version of the image in metadata
+ARG VERSION
+LABEL org.opencontainers.image.version="${VERSION}"
